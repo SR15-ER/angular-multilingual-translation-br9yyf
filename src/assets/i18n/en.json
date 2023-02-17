@@ -1,0 +1,59 @@
+{
+  "login": {
+    "title": "Login Form",
+    "username.label": "Username",
+    "username.placeholder": "Username Here",
+    "password.label": "Password",
+    "password.placeholder": "Enter Password",
+    "button.name": "Signin",
+    "forgotpassword.link": "Forgot Password ?",
+    "register.link": "Create New Account",
+    "button.en": "English",
+    "button.ta": "Tamil",
+    "button.fr": "French",
+    "button.zh": "Chinese"
+  },
+  "signup": {
+    "title": "Signup Form",
+    "firstName": "First Name",
+    "surName": "Sur Name",
+    "password": "Password",
+    "email": "Email address",
+    "role": "Role",
+    "button": "Signup",
+    "nameError.required": "First Name is required",
+    "surNameError.required": "Sur Name is required",
+    "emailError.required": "Email is required",
+    "emailError.invalid": "Please enter valid email",
+    "roleError.required": "Role is required",
+    "passwordError.required": "Password is required",
+    "admin": "Admin",
+    "user": "User",
+    "back": "Back"
+  },
+  "addTodo": {
+    "title": "Add Todo",
+    "todoTitle": "Todo Title",
+    "add": "Add",
+    "titleError.required": "Todo title is required",
+    "successMsg": "Added successfully"
+  },
+  "user": {
+    "id": "Id",
+    "FName": "firstName",
+    "surName": "surName",
+    "role": "Role",
+    "email": "Email",
+    "date": "Date",
+    "todoList": "Todo List"
+  },
+  "todoPage": {
+    "title": "My Todo List",
+    "logout": "logout",
+    "favoriteList":"favorite list",
+    "addToFavorite":"add to favorite",
+    "delete":"delete",
+    "addTitle": "Add Todo",
+    "add": "Add"
+  }
+}

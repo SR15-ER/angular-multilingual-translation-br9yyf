@@ -1,0 +1,27 @@
+<mat-toolbar>
+  <h4>{{'addTodo.title'|translate}}</h4>
+  <span class="nav-spacer"></span>
+  <button mat-icon-button matTooltip="{{'user.todoList'|translate}}" aria-label="Todo list">
+    <mat-icon routerLink='/list'>list</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-card >
+  <mat-card-title></mat-card-title>
+  <mat-card-content>
+    <div class="container">
+      <form [formGroup]="addTodoForm" >
+      <mat-form-field  class="width-50">
+        <mat-label>{{ 'addTodo.todoTitle' | translate }}</mat-label>
+        <input matInput  formControlName="todoTitle">
+        <mat-error *ngIf="addTodoForm.controls['todoTitle'].hasError('required')">
+          {{ 'addTodo.titleError.required' | translate }}
+      </mat-error>
+      </mat-form-field>
+      </form>
+    </div>
+<mat-card-actions>
+  <button [disabled]="!addTodoForm.valid"  type="submit" color="primary" mat-raised-button (click)="onSubmit()">{{'addTodo.add' | translate}}</button>
+</mat-card-actions>
+  </mat-card-content>
+</mat-card>

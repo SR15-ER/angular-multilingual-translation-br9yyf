@@ -1,0 +1,18 @@
+/* Add application styles & imports to this file! */
+@import '~ngx-toastr/toastr';
+.nav-spacer {
+  flex: 1 1 auto;
+}
+.green-snackbar {
+  background: #147611dd !important;
+}
+
+.red-snackbar {
+  background: #F44336;
+}
+table {
+  width: 100%;
+}
+mat-icon{
+  cursor: pointer;
+}

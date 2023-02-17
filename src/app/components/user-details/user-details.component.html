@@ -1,0 +1,47 @@
+<mat-toolbar>
+  <h4>{{'addTodo.title'|translate}}</h4>
+  <span class="nav-spacer"></span>
+    <mat-icon matTooltip="{{'user.todoList'|translate}}"  routerLink='/list'>list</mat-icon>
+</mat-toolbar>
+      <a mat-button routerLink="/login">{{'signup.back' | translate}}</a>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> {{'user.id'|translate}} </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="firstName">
+    <th mat-header-cell *matHeaderCellDef> {{'user.FName'|translate}} </th>
+    <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+  </ng-container>
+
+  <!-- surName Column -->
+  <ng-container matColumnDef="surName">
+    <th mat-header-cell *matHeaderCellDef>  {{'user.surName'|translate}} </th>
+    <td mat-cell *matCellDef="let element"> {{element.surName}} </td>
+  </ng-container>
+
+  <!-- role Column -->
+  <ng-container matColumnDef="role">
+    <th mat-header-cell *matHeaderCellDef>  {{'user.role'|translate}} </th>
+    <td mat-cell *matCellDef="let element"> {{element.role}} </td>
+  </ng-container>
+
+   <!-- email Column -->
+   <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef>  {{'user.email'|translate}} </th>
+    <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+  </ng-container>
+
+   <!-- date Column -->
+   <ng-container matColumnDef="date">
+    <th mat-header-cell *matHeaderCellDef>  {{'user.date'|translate}} </th>
+    <td mat-cell *matCellDef="let element"> {{element.accountCreated|date}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

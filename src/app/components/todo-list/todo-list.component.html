@@ -1,0 +1,27 @@
+<mat-toolbar>
+  <span>{{ 'todoPage.title' | translate }}</span>
+  <span class="nav-spacer"></span>
+    <mat-icon   [matBadge]="todoService?.fav?.length"
+    [matBadgeColor]="todoService?.fav?.length ? 'warn' : ''"
+    [color]="todoService?.fav?.length ? 'warn' : ''"
+    matTooltip="{{'todoPage.favoriteList'|translate}}" 
+    >favorite</mat-icon>
+  <button mat-icon-button class="add-icon" aria-label="Add Todo list" matTooltip="{{'addTodo.title'|translate}}">
+    <mat-icon routerLink='/add'>add</mat-icon>
+  </button>
+  <button mat-icon-button  aria-label="logout">
+  <mat-icon routerLink='/login'  matTooltip="{{'todoPage.logout'|translate}}" (click)="logOut()">input</mat-icon>
+</button>
+</mat-toolbar>
+<div class="card shadow" >
+  <div class="card-body" *ngIf="viewList">
+    <ul class="list-group" *ngFor="let todo of todoList | async;">
+      <app-todo [todoInput]="todo"></app-todo>
+    </ul>
+  </div>
+  <div class="card-body" *ngIf="!viewList">
+    <ul class="list-group" *ngFor="let todo of todoService.fav">
+      <app-todo [todoInput]="todo"></app-todo>
+    </ul>
+  </div>
+</div>

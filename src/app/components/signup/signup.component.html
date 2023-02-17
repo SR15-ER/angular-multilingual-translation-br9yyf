@@ -1,0 +1,62 @@
+<mat-card >
+<mat-card-title>{{ 'signup.title' | translate }}</mat-card-title>
+<mat-card-content>
+  <form [formGroup]="signupForm" (ngSubmit)="registerUser()">
+    <div class="container">
+      <mat-form-field  class="width-50">
+        <mat-label>{{ 'signup.firstName' | translate }}</mat-label>
+        <input matInput formControlName="firstName">
+        <mat-error *ngIf="signupForm.controls['firstName'].hasError('required')">
+          {{ 'signup.nameError.required' | translate }}
+      </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field  class="width-50 ml-2">
+        <mat-label>{{ 'signup.surName' | translate }}</mat-label>
+        <input matInput formControlName="surName">
+        <mat-error *ngIf="signupForm.controls['surName'].hasError('required')">
+          {{ 'signup.surNameError.required' | translate }}
+      </mat-error>
+      </mat-form-field>
+      <br>
+      <mat-form-field  class="width-100">
+        <mat-label>{{ 'signup.email' | translate }}</mat-label>
+        <input matInput placeholder="Ex. pat@example.com" formControlName="email">
+        <mat-error *ngIf="signupForm.controls['email'].hasError('email') && !signupForm.controls['email'].hasError('required')">
+          {{ 'signup.emailError.invalid' | translate }}
+      </mat-error>
+      <mat-error *ngIf="signupForm.controls['email'].hasError('required')">
+        {{ 'signup.emailError.required' | translate }}
+      </mat-error>
+      </mat-form-field>
+      <br>
+      <mat-form-field >
+      <mat-label>{{ 'signup.role' | translate }}</mat-label>
+      <mat-select formControlName="role">
+        <mat-option value="admin">{{ 'signup.admin' | translate }}</mat-option>
+        <mat-option value="user">{{ 'signup.user' | translate }}</mat-option>
+      </mat-select>
+      <mat-error *ngIf="signupForm.controls['role'].hasError('required')">
+        {{ 'signup.roleError.required' | translate }}
+    </mat-error>
+    </mat-form-field>
+    <br>
+      <mat-form-field  class="width-100">
+        <mat-label>{{ 'signup.password' | translate }}</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+        <button mat-icon-button matSuffix (click)="hide = !hide;$event.stopPropagation();" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-error *ngIf="signupForm.controls['password'].hasError('required')">
+          {{ 'signup.passwordError.required' | translate }}
+      </mat-error>
+      </mat-form-field>
+      <br>
+      <div class="button">
+      <a mat-button routerLink="/login">{{'signup.back' | translate}}</a>
+      <button [disabled]="!signupForm.valid" type="submit" color="primary" mat-raised-button >{{'signup.button' | translate}}</button>
+      </div>
+    </div>
+  </form>
+</mat-card-content>
+</mat-card>

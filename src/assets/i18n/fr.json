@@ -1,0 +1,59 @@
+{
+	"login": {
+		"title": "Formulaire De Connexion",
+		"username.label": "Nom d'utilisateur",
+		"username.placeholder": "Nom D'Utilisateur Ici",
+		"password.label": "Mot de passe",
+		"password.placeholder": "Entrez Le Mot De Passe",
+		"button.name": "S'identifier",
+		"forgotpassword.link": "Mot De Passe Oublié ?",
+		"register.link": "Créer Un Nouveau Compte",
+		"button.en": "Anglaise",
+		"button.ta": "Tamil",
+		"button.fr": "Française",
+		"button.zh": "Chinoise"
+	},
+	"signup": {
+    "title": "Formulaire d'inscription",
+    "firstName": "Prénom",
+    "surName":"Nom de famille",
+    "password": "Mot de passe",
+		"email":"Adresse e-mail",
+		"role":"Rôle",
+    "button": "S'inscrire",
+		"nameError.required":"Le prénom est requis",
+    "surNameError.required":"Le nom de famille est requis",
+    "emailError.required":"L'e-mail est requis",
+    "emailError.invalid":"Veuillez saisir une adresse e-mail valide",
+    "roleError.required":"Le rôle est requis",
+    "passwordError.required":"Mot de passe requis",
+		"admin":"Administrateur",
+    "user":"Utilisateur",
+		"back":"Dos"
+  },
+	"addTodo":{
+		"title":"Ajouter une tâche",
+		"todoTitle":"Titre à faire",
+		"add":"Ajouter",
+		"titleError.required":"Le titre de la tâche est requis",
+		"successMsg":"Ajouté avec succès"
+	 },
+	 "user":{
+		"id":"identifiant",
+		"FName":"prénom",
+		"surName":"nom de famille",
+		"role":"Rôle",
+		"email":"é-mail",
+		"date":"Date",
+		"todoList":"Liste de choses à faire"
+	 },
+	"todoPage": {
+    "title": "Ma liste de tâches",
+		"logout":"Se déconnecter",
+		"favoriteList":"Liste des favoris",
+		"addToFavorite":"ajouter aux Favoris",
+		"delete":"supprimer",
+		"addTitle":"Ajouter une tâche",
+		"add":"Ajouter"
+  }
+}

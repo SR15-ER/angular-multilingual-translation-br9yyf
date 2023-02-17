@@ -1,0 +1,27 @@
+p {
+  font-family: Lato;
+}
+
+
+.btn-default {
+  direction: rtl;
+
+}
+
+.btn-change {
+ direction:ltr;
+}
+.flex{
+  display: flex;
+}
+
+.btn-group{
+  display: flex;
+  justify-content: center;
+}
+.btn-group button{
+  margin: 5px;
+}
+.nav-spacer {
+  flex: 1 1 auto;
+}

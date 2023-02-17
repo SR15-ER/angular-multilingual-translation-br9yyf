@@ -1,0 +1,27 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <input
+        type="checkbox"
+        class="form-check-input"
+        id="complete"
+        (change)="onChange(todoInput)"
+      />{{ todoInput.title|translate }}</mat-card-title
+    >
+    <mat-card-subtitle
+      >Completed :{{ todoInput?.isCompleted ? ' Yes' : ' No' }}</mat-card-subtitle
+    >
+  </mat-card-header>
+  <mat-card-actions align="end">
+    <div class="form-check d-inline">
+      <mat-icon
+        [color]="todoInput.isFavorite ? 'warn' : ''"
+        (click)="isFavorite()"
+        matTooltip="{{'todoPage.addToFavorite'|translate}}"
+        >favorite</mat-icon
+      >
+    </div>
+    <mat-icon (click)="deleteTodo(todoInput)"  matTooltip="{{'todoPage.delete'|translate}}">delete</mat-icon>
+  </mat-card-actions>
+</mat-card>
+<br />
